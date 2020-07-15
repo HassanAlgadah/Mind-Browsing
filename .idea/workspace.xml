@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cb50706-1546-4545-9ff8-5b2d6040dc6d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eFGSBQgfYLEAiLbbMihDwaMKwL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.7.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../emotiv-insight-keystroke-master" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hassan\Desktop\mind-browsing\public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.home.js">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="cortex_code_example.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/cortex_code_example.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="home.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/home.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Node.js.home.js" />
+        <item itemvalue="Node.js.cortex_code_example.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cb50706-1546-4545-9ff8-5b2d6040dc6d" name="Default Changelist" comment="" />
+      <created>1593909924335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593909924335</updated>
+      <workItem from="1593909925790" duration="3959000" />
+      <workItem from="1594185988521" duration="1613000" />
+      <workItem from="1594236113478" duration="689000" />
+      <workItem from="1594271049344" duration="10051000" />
+      <workItem from="1594532553678" duration="626000" />
+      <workItem from="1594730422750" duration="3413000" />
+      <workItem from="1594807083007" duration="1370000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1545" y="336" key="FileChooserDialogImpl" timestamp="1593913909990">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1545" y="336" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1593913909990" />
+    <state width="1453" height="229" key="GridCell.Tab.0.bottom" timestamp="1594283203457">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1453" height="229" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1594283203457" />
+    <state width="1453" height="229" key="GridCell.Tab.0.center" timestamp="1594283203457">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1453" height="229" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1594283203457" />
+    <state width="1453" height="229" key="GridCell.Tab.0.left" timestamp="1594283203457">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1453" height="229" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1594283203457" />
+    <state width="1453" height="229" key="GridCell.Tab.0.right" timestamp="1594283203457">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1453" height="229" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1594283203457" />
+  </component>
+</project>
