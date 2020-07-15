@@ -48,7 +48,10 @@
       <recent name="C:\Users\Hassan\Desktop\mind-browsing\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.home.js">
+  <component name="RunManager" selected="Node.js.app.js (1)">
+    <configuration name="app.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/backend/app.js" working-dir="$PROJECT_DIR$/backend">
+      <method v="2" />
+    </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -60,6 +63,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.app.js (1)" />
         <item itemvalue="Node.js.app.js" />
         <item itemvalue="Node.js.home.js" />
         <item itemvalue="Node.js.cortex_code_example.js" />
