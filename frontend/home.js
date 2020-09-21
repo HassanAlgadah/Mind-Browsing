@@ -56,9 +56,7 @@ async function getdata(){
 }
 
 async function keyPress(key){
-    let request = await fetch(`http://127.0.0.1:5000/${key}`)
-    let data = await request.json()
-    return data
+    await fetch(`http://127.0.0.1:5000/${key}`)
 }
 
 
