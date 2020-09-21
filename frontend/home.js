@@ -17,6 +17,7 @@ async function start () {
                 console.log(eyes)
                 // right wink
                 if (eyes === 'winkR') {
+                    keyPress('tab')
 
                 }
                 
@@ -48,11 +49,14 @@ async function start () {
 
 
 
-
-
-
 async function getdata(){
     let request = await fetch('http://127.0.0.1:4000/data')
+    let data = await request.json()
+    return data
+}
+
+async function keyPress(key){
+    let request = await fetch(`http://127.0.0.1:5000/${key}`)
     let data = await request.json()
     return data
 }
