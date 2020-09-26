@@ -3,6 +3,7 @@ async function start () {
     let smile
     let surprise
     let frown
+    let upprtface
     let preveyes = null
     let div = document.getElementById('box')
 
@@ -10,7 +11,7 @@ async function start () {
         
 
         getdata().then(data=>{
-            console.log(data['fac'])
+            // console.log(data['fac'])
 
 
             ///////////////////////////////////////// eyes action wink right , wink left , blink
@@ -25,47 +26,40 @@ async function start () {
                 }
 
                 //left wink
-                if (eyes === 'winkL'){
+                else if (eyes === 'winkL'){
                     keyPress('enter')
 
                 }
 
             }
             //smile
-            if (smile !== data['fac'][0] ){
-                smile = data['fac'][0]
+            else if (smile !== data['fac'][3] ){
+                smile = data['fac'][3]
                 console.log(smile)
                 if(smile === 'smile') {
-                    keyPress('backpage')
+                    keyPress('back_page')
                 }
             }
               //surprise
-            if(surprise !== data['fac'][0]){
-                surprise = data['fac'][0]
-                console.log(surprise)
-                if(surprise === 'surprise'){
+            else if(upprtface !== data['fac'][1]){
+                upprtface = data['fac'][1]
+                console.log(upprtface)
+                if(upprtface === 'surprise'){
                       keyPress('refresh')
                 }
-
-
-            }
-              //frown
-            if(frown !== data['fac'][0]){
-                frown = data['fac'][0]
-                console.log(frwon)
-                if(frown === 'frown') {
-                    keyPress('page down')
+                else if(upprtface === 'frown') {
+                    keyPress('page_down')
                 }
+
+
             }
-
-
 
 
 
             ///////////////////////////////////////////////////
 
         })
-    },10)
+    },100)
 
 
 
