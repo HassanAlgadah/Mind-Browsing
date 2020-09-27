@@ -1,65 +1,75 @@
-async function start () {
-    let eyes
+async function start() {
+    let upperface
     let smile
-    let surprise
-    let frown
-    let upprtface
-    let preveyes = null
-    let div = document.getElementById('box')
+    let eyes
+    let tab
+    let enter
+    let back_page
+    let refresh
+    let page_down
+    let timer = 0
 
-    window.setInterval(()=>{
-        
 
-        getdata().then(data=>{
+    window.setInterval(() => {
+
+
+        getdata().then(data => {
             // console.log(data['fac'])
+            if (timer % 1000 === 0) {
+                let max_fac = Math.max(tab, enter, back_page, refresh, page_down)
+                switch (max_fac) {
+                    case tab:
+                        keyPress('tab')
+                        break
+                    case enter:
+                        keyPress('enter')
+                        break
+                    case back_page:
+                        keyPress('back_page')
+                        break
+                    case refresh:
+                        keyPress('refresh')
+                        break
+                    case page_down:
+                        keyPress('page_down')
+                }
+            }
 
 
             ///////////////////////////////////////// eyes action wink right , wink left , blink
 
-            if(eyes !== data['fac'][0]) {
-                eyes = data['fac'][0]
-                console.log(eyes)
-                // right wink
-                if (eyes === 'winkR') {
-                    keyPress('tab')
-
-                }
-
-                //left wink
-                else if (eyes === 'winkL'){
-                    keyPress('enter')
-
-                }
-
+            eyes = data['fac'][0]
+            console.log(eyes)
+            // right wink
+            if (eyes === 'winkR') {
+                tab++
+            }
+            //left wink
+            else if (eyes === 'winkL') {
+                enter++
             }
             //smile
-            else if (smile !== data['fac'][3] ){
-                smile = data['fac'][3]
-                console.log(smile)
-                if(smile === 'smile') {
-                    keyPress('back_page')
-                }
+            smile = data['fac'][3]
+            console.log(smile)
+            if (smile === 'smile') {
+                keyPress('back_page')
+                back_page++
             }
-              //surprise
-            else if(upprtface !== data['fac'][1]){
-                upprtface = data['fac'][1]
-                console.log(upprtface)
-                if(upprtface === 'surprise'){
-                      keyPress('refresh')
-                }
-                else if(upprtface === 'frown') {
-                    keyPress('page_down')
-                }
-
-
+            //surprise
+            upperface = data['fac'][1]
+            console.log(upperface)
+            if (upperface === 'surprise') {
+                keyPress('refresh')
+                refresh++
+            } else if (upperface === 'frown') {
+                keyPress('page_down')
+                page_down++
             }
 
-
-
-            ///////////////////////////////////////////////////
 
         })
-    },100)
+        timer++
+    }, 10)
 
 
 
@@ -67,19 +77,12 @@ async function start () {
 }
 
 
-
-
-
-
-
-
-async function getdata(){
+async function getdata() {
     let request = await fetch('http://127.0.0.1:4000/data')
-    let data = await request.json()
-    return data
+    return await request.json()
 }
 
-async function keyPress(key){
+async function keyPress(key) {
     await fetch(`http://127.0.0.1:5000/${key}`)
 }
 
