@@ -1,6 +1,6 @@
 async function start() {
     let upperface
-    let smile
+    let lowerface
     let eyes
     let tab
     let enter
@@ -15,6 +15,33 @@ async function start() {
 
         getdata().then(data => {
             // console.log(data['fac'])
+
+            eyes = data['fac'][0]
+            upperface = data['fac'][1]
+            lowerface = data['fac'][3]
+
+            // right wink
+            if (eyes === 'winkR') {
+                tab++
+            }
+            //left wink
+            else if (eyes === 'winkL') {
+                enter++
+            }
+            //smile
+            if (lowerface === 'smile') {
+                back_page++
+            }
+
+            //upper face
+            if (upperface === 'surprise') {
+                refresh++
+            } else if (upperface === 'frown') {
+                page_down++
+            }
+
+            console.log(`eyes: ${eyes}, upper face: ${upperface}, lower face: ${lowerface}`)
+
             if (timer % 1000 === 0) {
                 let max_fac = Math.max(tab, enter, back_page, refresh, page_down)
                 switch (max_fac) {
@@ -36,42 +63,9 @@ async function start() {
             }
 
 
-            ///////////////////////////////////////// eyes action wink right , wink left , blink
-
-            eyes = data['fac'][0]
-            console.log(eyes)
-            // right wink
-            if (eyes === 'winkR') {
-                tab++
-            }
-            //left wink
-            else if (eyes === 'winkL') {
-                enter++
-            }
-            //smile
-            smile = data['fac'][3]
-            console.log(smile)
-            if (smile === 'smile') {
-                keyPress('back_page')
-                back_page++
-            }
-            //surprise
-            upperface = data['fac'][1]
-            console.log(upperface)
-            if (upperface === 'surprise') {
-                keyPress('refresh')
-                refresh++
-            } else if (upperface === 'frown') {
-                keyPress('page_down')
-                page_down++
-            }
-
-
         })
         timer++
     }, 10)
-
-
 
 
 }
