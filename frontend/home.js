@@ -8,6 +8,7 @@ async function start() {
     let refresh=0
     let page_down=0
     let timer = 0
+    let noti = 0
 
 
     window.setInterval(() => {
@@ -22,7 +23,7 @@ async function start() {
 
             // right wink
             if (eyes === 'winkR') {
-                tab++
+                tab+=10
             }
             //left wink
             else if (eyes === 'winkL') {
@@ -39,14 +40,25 @@ async function start() {
             } else if (upperface === 'frown') {
                 page_down++
             }
-            console.log(tab, enter, back_page, refresh, page_down, timer)
+            if(eyes === 'neutral'){
+                noti++
+            }
+            if(upperface === 'neutral'){
+                noti++
+            }
+            if(lowerface === 'neutral'){
+                noti++
+            }
 
-            console.log(`eyes: ${eyes}, upper face: ${upperface}, lower face: ${lowerface}`)
+
+            // console.log(tab, enter, back_page, refresh, page_down, timer)
+
+            // console.log(`eyes: ${eyes}, upper face: ${upperface}, lower face: ${lowerface}`)
 
             if (timer % 1000 === 0) {
                 let max_fac = Math.max(tab, enter, back_page, refresh, page_down)
-                console.log(tab, enter, back_page, refresh, page_down)
-                console.log(max_fac,"hdhhhhhddddddddddldddjdjdjdjdjdjdjdjdjdjdjdjdjdjdjjdjdjdjdjdjdjdjdjdjdjdjdjdj")
+                // console.log(tab, enter, back_page, refresh, page_down)
+                console.log('max: '+max_fac,'noti: '+noti/3)
                 switch (max_fac) {
                     case tab:
                         keyPress('tab')
@@ -69,6 +81,7 @@ async function start() {
                 refresh=0
                 page_down=0
                 timer = 0
+                noti= 0
             }
 
 
@@ -87,6 +100,7 @@ async function getdata() {
 }
 
 async function keyPress(key) {
+    console.log(key)
     await fetch(`http://127.0.0.1:5000/${key}`)
 }
 

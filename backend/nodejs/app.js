@@ -15,7 +15,7 @@ let user = {
 }
 let api = new emotiv.api(user,socketUrl)
 
-api.live('hassan')
+api.live('Nawaf')
 
 api.sub(['fac'])
 
