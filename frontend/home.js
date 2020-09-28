@@ -2,11 +2,11 @@ async function start() {
     let upperface
     let lowerface
     let eyes
-    let tab
-    let enter
-    let back_page
-    let refresh
-    let page_down
+    let tab=0
+    let enter=0
+    let back_page=0
+    let refresh=0
+    let page_down=0
     let timer = 0
 
 
@@ -39,11 +39,14 @@ async function start() {
             } else if (upperface === 'frown') {
                 page_down++
             }
+            console.log(tab, enter, back_page, refresh, page_down, timer)
 
             console.log(`eyes: ${eyes}, upper face: ${upperface}, lower face: ${lowerface}`)
 
             if (timer % 1000 === 0) {
                 let max_fac = Math.max(tab, enter, back_page, refresh, page_down)
+                console.log(tab, enter, back_page, refresh, page_down)
+                console.log(max_fac,"hdhhhhhddddddddddldddjdjdjdjdjdjdjdjdjdjdjdjdjdjdjjdjdjdjdjdjdjdjdjdjdjdjdjdj")
                 switch (max_fac) {
                     case tab:
                         keyPress('tab')
@@ -60,11 +63,18 @@ async function start() {
                     case page_down:
                         keyPress('page_down')
                 }
+                tab=0
+                enter=0
+                back_page=0
+                refresh=0
+                page_down=0
+                timer = 0
             }
 
 
+            timer+=10
+
         })
-        timer++
     }, 10)
 
 
