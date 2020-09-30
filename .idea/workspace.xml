@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6cb50706-1546-4545-9ff8-5b2d6040dc6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/nodejs/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/nodejs/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +22,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>winkL</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -41,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.15.2" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/nodejs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -125,11 +121,12 @@
       <workItem from="1600693407455" duration="907000" />
       <workItem from="1601141778047" duration="3411000" />
       <workItem from="1601146390399" duration="1554000" />
+      <workItem from="1601462170338" duration="307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1545" y="336" key="FileChooserDialogImpl" timestamp="1593913909990">
