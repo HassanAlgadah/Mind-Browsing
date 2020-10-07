@@ -1,27 +1,24 @@
 from flask import Flask, render_template, request, jsonify, url_for, redirect
 import keyboard
-import time
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/tab')
 def press_tab():
-    time.sleep(5)
     keyboard.press('tab')
     return "ok"
 
 
 @app.route('/enter')
 def press_enter():
-    time.sleep(5)
     keyboard.press('enter')
     return "ok"
 
 
 @app.route('/back_page')
 def back_page():
-    time.sleep(5)
     #keyboard.press_and_release('Alt + left arrow')
     #For mac
     keyboard.press_and_release('cmd + left arrow')
@@ -30,7 +27,6 @@ def back_page():
 
 @app.route('/refresh')
 def press_refresh():
-    time.sleep(5)
     #keyboard.press_and_release('Ctrl + r')
     #For mac
     keyboard.press_and_release('cmd + r')
@@ -39,7 +35,6 @@ def press_refresh():
 
 @app.route('/page_down')
 def press_page_down():
-    time.sleep(5)
     keyboard.press('page down')
     return "ok"
 
