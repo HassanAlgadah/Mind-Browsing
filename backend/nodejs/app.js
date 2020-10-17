@@ -15,9 +15,10 @@ let user = {
 }
 let api = new emotiv.api(user,socketUrl)
 
-api.live('hassan')
+api.live('Nawaf')
 
 api.sub(['fac'])
+// api.data.onchange(()=>{console.log(api.data)})
 
 app.get('/data',(req,res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
