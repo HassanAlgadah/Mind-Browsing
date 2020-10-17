@@ -2,75 +2,88 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>MindBrowsing Bootstrapstudio</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Testimonials.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>MindBrowsing Bootstrapstudio</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+  <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+  <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/Testimonials.css">
 </head>
 
 <body>
-    <div>
-      <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-          <div class="container"><img src="assets/img/mind%20browsing.png" style="width: 100px;"><a class="text-right" href="index.html">Home</a><a class="navbar-brand" href="#"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon text-center"></span></button>
-              <a
-                  href="Setting.html">Setting</a>
-                  <div class="collapse navbar-collapse" id="navcol-1">
-                      <ul class="nav navbar-nav mr-auto">
-                          <li class="nav-item"></li>
-                          <li class="nav-item"></li>
-                          <li class="nav-item"><a class="nav-link text-left" href="Headset%20Status.html"><strong>Headset Status</strong></a></li>
-                      </ul>
-                      <span class="navbar-text actions"> <a onclick="openLoginForm()" class="text-center login" href="#" style="margin: 10px;">Log In</a></span></div>
+  <div>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+      <div class="container"><img src="assets/img/mind%20browsing.png" style="width: 100px;"><a class="text-right"
+          href="index.html">Home</a><a class="navbar-brand" href="#"></a><button data-toggle="collapse"
+          class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+            class="navbar-toggler-icon text-center"></span></button>
+        <a href="Setting.html">Setting</a>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item"></li>
+            <li class="nav-item"></li>
+            <li class="nav-item"><a class="nav-link text-left" href="Headset%20Status.html"><strong>Headset
+                  Status</strong></a></li>
+          </ul>
+          <span class="navbar-text actions"> <a onclick="openLoginForm()" id="login_button" class="text-center login"
+              href="#" style="margin: 10px;">Log In</a></span>
+        </div>
+        <span class="navbar-text actions"> <a href="Sing%20Up.html" id="signup_button" class="text-center login"
+            href="#" style="margin: 10px;">Sing Up</a></span>
+      </div>
+      <span class="navbar-text actions"> <a onclick="logout()" id="logout_button" class="text-center login" href="#"
+          style="margin: 10px;">log out</a></span>
+  </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="assets/img/Emotive%20plus.png" style="width: 250px;margin: 150px;"></div>
+      <div class="col-md-6">
+        <p></p>
+        <h1 style="font-size: 30px;"><strong>Headset Status</strong></h1>
+        <p style="font-size: 20px;">Battary :&nbsp;<i class="fa fa-battery-half" style="font-size: 30px;"></i></p>
+        <p style="font-size: 20px;">Bluetooth :<i class="fa fa-bluetooth-b" style="font-size: 30px;"></i></p>
+        <p style="height: 33px;font-size: 20px;">Signal Quality :&nbsp;<i class="fa fa-star"></i></p>
+      </div>
+      <div class="popup-overlay"></div>
+      <div class="popup">
+        <div class="popup-close" onclick="closeLoginForm()">&times;</div>
+        <div class="form">
+          <div class="avatar">
+            <img src="assets/img/mind%20browsing.png" alt="">
+          </div>
+          <div class="header">
+            Member login
+          </div>
+          <div class="element">
+            <label for="username">E-mail</label>
+            <input type="text" id="email_login">
+          </div>
+          <div class="element">
+            <label for="password">Password</label>
+            <input type="password" id="pass_login">
+          </div>
+          <div class="element">
+            <button onclick="sign_in()">Login</button>
+          </div>
+        </div>
+      </div>
 
-                      <a href="Sing%20Up.html" style="background: #5690c6;font-size: 22px;color: #f2f5f8;">Sing Up</a></div>
-      </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6"><img src="assets/img/Emotive%20plus.png" style="width: 250px;margin: 150px;"></div>
-                <div class="col-md-6">
-                    <p></p>
-                    <h1 style="font-size: 30px;"><strong>Headset Status</strong></h1>
-                    <p style="font-size: 20px;">Battary :&nbsp;<i class="fa fa-battery-half" style="font-size: 30px;"></i></p>
-                    <p style="font-size: 20px;">Bluetooth :<i class="fa fa-bluetooth-b" style="font-size: 30px;"></i></p>
-                    <p style="height: 33px;font-size: 20px;">Signal Quality :&nbsp;<i class="fa fa-star"></i></p>
-                </div>
-        <div class="popup-overlay"></div>
-                <div class="popup">
-                  <div class="popup-close" onclick="closeLoginForm()">&times;</div>
-                  <div class="form">
-                    <div class="avatar">
-                      <img src="assets/img/mind%20browsing.png" alt="">
-                    </div>
-                    <div class="header">
-                      Member login
-                    </div>
-                    <div class="element">
-                      <label for="username">Username</label>
-                      <input type="text" id="username">
-                    </div>
-                    <div class="element">
-                      <label for="password">Password</label>
-                      <input type="password" id="password">
-                    </div>
-                    <div class="element">
-                      <button>Login</button>
-                    </div>
-                  </div>
-                </div>
 
 
+      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+      <script src="auth.js"></script>
 
-
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets\js\pupop.js"></script>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets\js\pupop.js"></script>
 
 </body>
 
