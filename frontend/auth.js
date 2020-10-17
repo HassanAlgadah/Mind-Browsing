@@ -23,6 +23,8 @@ var firebaseConfig = {
   
     var email = document.getElementById("email_signup").value;
     var password = document.getElementById("pass_signup").value;
+    var user_name = document.getElementById("user_name").value;
+
     // id=Math.floor(Math.random() * 100000000000000);
     // firebase.database().ref('user/'+id).set({
     //   User_name:email
@@ -31,7 +33,7 @@ var firebaseConfig = {
     // });
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(respnse){
         console.log(respnse);
-        send();
+        send(user_name);
 
     })
 
@@ -100,12 +102,18 @@ var firebaseConfig = {
   }
   
   
-  function send(){
+  function send(user_name){
       alert('djd');
     var userId = firebase.auth().currentUser.uid;
+    var email = firebase.auth().currentUser.email;
     firebase.database().ref('user/'+userId).set({
-      User_name: 'djkhdfh'
-      
+        email:email,
+        User_name: user_name,
+        surprise:'tab',
+        frown:'page_down',
+        smile:'enter',
+        winkR:'refresh',
+        winkL:'back_page'
   
     });
     alert('done');
