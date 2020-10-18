@@ -66,6 +66,7 @@ var firebaseConfig = {
       document.getElementById('signup_button').style.display='none';
       document.getElementById('logout_button').style.display='unset';
     } else {
+        openLoginForm();
       document.getElementById('login_button').style.display='unset';
       document.getElementById('signup_button').style.display='unset';
       document.getElementById('logout_button').style.display='none';
@@ -118,8 +119,78 @@ var firebaseConfig = {
     });
     alert('done');
   }
+
+  function update_facial(Surprise,Frown,Smile,Blink_Right,Blink_Left){
+    var userId = firebase.auth().currentUser.uid;
+    firebase.database().ref('user/'+userId).update({
+        surprise:Surprise,
+        frown:Frown,
+        smile:Smile,
+        winkR:Blink_Right,
+        winkL:Blink_Left
+  
+    });
+
+
+
+  }
+
+function get_radios_value(){
+  var Surprise;
+  var Frown;
+  var Smile;
+  var Blink_Right;
+  var Blink_Left;
+
+var facial=document.getElementsByName('facial');
+var facial1=document.getElementsByName('facial1');
+var facial2=document.getElementsByName('facial2');
+var facial3=document.getElementsByName('facial3');
+var facial4=document.getElementsByName('facial4');
+
+
+for (var i = 0; i <  facial.length; i++) {
+  if (facial[i].checked) {
+    alert(facial[i].value);
+    Surprise=facial[i].value;
+    break;
+  }
+}
+
+for (var i = 0; i <  facial1.length; i++) {
+    if (facial1[i].checked) {
+      alert(facial1[i].value);
+      Frown=facial1[i].value;
+      break;
+    }
+  }
+  for (var i = 0; i <  facial2.length; i++) {
+    if (facial2[i].checked) {
+      alert(facial2[i].value);
+      Smile= facial2[i].value;
+      break;
+    }
+  }
+  for (var i = 0; i <  facial3.length; i++) {
+    if (facial3[i].checked) {
+      alert(facial3[i].value);
+      Blink_Right=facial3[i].value;
+      break;
+    }
+  }
+  for (var i = 0; i <  facial4.length; i++) {
+    if (facial4[i].checked) {
+      alert(facial4[i].value);
+      Blink_Left=facial4[i].value;
+      break;
+    }
+  }
+  update_facial(Surprise,Frown,Smile,Blink_Right,Blink_Left);
+
+
+        
   
   
-  
+}
   
   
