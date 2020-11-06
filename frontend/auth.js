@@ -5,6 +5,7 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+
 var firebaseConfig = {
     apiKey: "AIzaSyCQ8TcN3rdmUhRLQ46HM23NA6dB9ti5Xwc",
     authDomain: "mind--browsing.firebaseapp.com",
@@ -18,7 +19,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  
+
   function sign_up() {
   
     var email = document.getElementById("email_signup").value;
@@ -60,18 +61,7 @@ var firebaseConfig = {
   }
   
   
-  firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-      document.getElementById('login_button').style.display='none';
-      document.getElementById('signup_button').style.display='none';
-      document.getElementById('logout_button').style.display='unset';
-    } else {
-        openLoginForm();
-      document.getElementById('login_button').style.display='unset';
-      document.getElementById('signup_button').style.display='unset';
-      document.getElementById('logout_button').style.display='none';
-    }
-  });
+
   // firebase.auth().signOut().then(function () {
   //   // Sign-out successful.
   // }).catch(function (error) {
@@ -81,7 +71,6 @@ var firebaseConfig = {
   function logout() {
     firebase.auth().signOut().then(function () {
       // Sign-out successful.
-      alert('ssssssec');
     }).catch(function (error) {
       // An error happened.
     });
@@ -92,17 +81,15 @@ var firebaseConfig = {
     var user = firebase.auth().currentUser;
   
     if (user) {
-  alert("7loooooooo");
-  
+  alert('nice')
   } else {
       // No user is signed in.
   
-      alert("z888888888888");
     }
   
   }
   
-  
+  // when the user sign up set defulte F E in database 
   function send(user_name){
       alert('djd');
     var userId = firebase.auth().currentUser.uid;
@@ -120,6 +107,8 @@ var firebaseConfig = {
     alert('done');
   }
 
+
+
   function update_facial(Surprise,Frown,Smile,Blink_Right,Blink_Left){
     var userId = firebase.auth().currentUser.uid;
     firebase.database().ref('user/'+userId).update({
@@ -131,7 +120,7 @@ var firebaseConfig = {
   
     });
 
-
+alert('Done')
 
   }
 
@@ -142,6 +131,7 @@ function get_radios_value(){
   var Blink_Right;
   var Blink_Left;
 
+
 var facial=document.getElementsByName('facial');
 var facial1=document.getElementsByName('facial1');
 var facial2=document.getElementsByName('facial2');
@@ -151,7 +141,6 @@ var facial4=document.getElementsByName('facial4');
 
 for (var i = 0; i <  facial.length; i++) {
   if (facial[i].checked) {
-    alert(facial[i].value);
     Surprise=facial[i].value;
     break;
   }
@@ -159,38 +148,32 @@ for (var i = 0; i <  facial.length; i++) {
 
 for (var i = 0; i <  facial1.length; i++) {
     if (facial1[i].checked) {
-      alert(facial1[i].value);
       Frown=facial1[i].value;
       break;
     }
   }
   for (var i = 0; i <  facial2.length; i++) {
     if (facial2[i].checked) {
-      alert(facial2[i].value);
       Smile= facial2[i].value;
       break;
     }
   }
   for (var i = 0; i <  facial3.length; i++) {
     if (facial3[i].checked) {
-      alert(facial3[i].value);
       Blink_Right=facial3[i].value;
       break;
     }
   }
   for (var i = 0; i <  facial4.length; i++) {
     if (facial4[i].checked) {
-      alert(facial4[i].value);
       Blink_Left=facial4[i].value;
       break;
     }
   }
   update_facial(Surprise,Frown,Smile,Blink_Right,Blink_Left);
-
-
-        
-  
+  z.push(Surprise);
+  alert(z[0]);
   
 }
-  
-  
+
+
