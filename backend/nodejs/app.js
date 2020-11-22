@@ -17,8 +17,7 @@ let api = new emotiv.api(user,socketUrl)
 
 api.live('Nawaf')
 
-api.sub(['fac'])
-// api.data.onchange(()=>{console.log(api.data)})
+api.sub(['fac','dev'])
 
 app.get('/data',(req,res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");

@@ -4,8 +4,7 @@
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-
+//  frown, smile, surprise, winkL, winkR;
 var firebaseConfig = {
     apiKey: "AIzaSyCQ8TcN3rdmUhRLQ46HM23NA6dB9ti5Xwc",
     authDomain: "mind--browsing.firebaseapp.com",
@@ -20,28 +19,81 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  function sign_up() {
   
-    var email = document.getElementById("email_signup").value;
-    var password = document.getElementById("pass_signup").value;
-    var user_name = document.getElementById("user_name").value;
 
-    // id=Math.floor(Math.random() * 100000000000000);
-    // firebase.database().ref('user/'+id).set({
-    //   User_name:email
-      
+
+
+
+  // chrome.runtime.onMessage.addListener(function(request,sender,sendresponse){
+  //   if(request.message==='is_user_signed_in'){
+    
+  //       sendresponse({
+  //   message:'success',
+  //   payload:true,
+  //   // data:'frown',
+  //   // smile:smile,
+  //   // surprise:surprise,
+  //   // winkL:winkL,
+  //   // winkR:winkR
+  //       });
+  //   }
+  //   return true;
+  //   })
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function(event) {
+//   var b = document.getElementById('login');
+//   b.addEventListener('click', sign_up, false);
+// });
+
+
+
+
+// chrome.runtime.omMessage.addListener((msg,sender,resp)=>{
+
+//     alert(msg.data.domain)
+
+// }) 
+
+//document.querySelector('#login').addEventListener('click',sign_up)
+
+    
+if(document.querySelector('#login') !== null){
+  document.querySelector('#login').addEventListener('click',sign_in)
+  document.querySelector('#sign_out').addEventListener('click',logout)
+
+}
+if(document.getElementById('sign_up') !== null){
+
+  document.getElementById('sign_up').addEventListener('click',sign_up);
+}
+
+    function sign_up() {
   
-    // });
+     var email = document.querySelector('#email_login').value;
+     var password = document.querySelector('#pass_login').value;
+     alert(email)
+
+
+
+
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(respnse){
         console.log(respnse);
-        send(user_name);
-
+        //send(user_name);
     })
 
+
   }
+  if(document.getElementById('sign_in') !== null){
+    document.getElementById('sign_in').addEventListener('click',sign_in)
+  }
+
   function sign_in() {
-    var email = document.getElementById("email_login").value;
-    var password = document.getElementById("pass_login").value;
+    var email = document.querySelector('#email_login').value;
+    var password = document.querySelector('#pass_login').value;
    console.log(email,password);
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
       // Handle Errors here.
@@ -54,11 +106,27 @@ var firebaseConfig = {
         alert(errorMessage);
       }
       window.alert("errorMessage");
-      console.log(error);
       // [END_EXCLUDE]
-    });
+    }).then(()=>{
+      window.location.reload();
+
+    })
+
   
   }
+
+  // function authentcation(){
+  //   firebase.auth().onAuthStateChanged(function (user) {
+
+  //     if(user){
+  //       alert('fine')
+      
+  //     }else{
+  //       alert('not fine')
+  //     }
+  //   })
+
+  // }
   
   
 
@@ -67,7 +135,10 @@ var firebaseConfig = {
   // }).catch(function (error) {
   //   // An error happened.
   // });
-  
+  if(document.getElementById('logout_button') !== null){
+
+  document.getElementById('logout_button').addEventListener('click',logout);
+  }
   function logout() {
     firebase.auth().signOut().then(function () {
       // Sign-out successful.
@@ -81,7 +152,6 @@ var firebaseConfig = {
     var user = firebase.auth().currentUser;
   
     if (user) {
-  alert('nice')
   } else {
       // No user is signed in.
   
@@ -91,7 +161,6 @@ var firebaseConfig = {
   
   // when the user sign up set defulte F E in database 
   function send(user_name){
-      alert('djd');
     var userId = firebase.auth().currentUser.uid;
     var email = firebase.auth().currentUser.email;
     firebase.database().ref('user/'+userId).set({
@@ -122,6 +191,10 @@ var firebaseConfig = {
 
 alert('Done')
 
+  }
+  if(document.getElementById('get_radios_value') !== null){
+  
+  document.getElementById('get_radios_value').addEventListener('click',get_radios_value);
   }
 
 function get_radios_value(){
@@ -174,6 +247,33 @@ for (var i = 0; i <  facial1.length; i++) {
   z.push(Surprise);
   alert(z[0]);
   
+}
+function s_end(){
+  let userId = firebase.auth().currentUser.uid;
+  let get_Data = firebase.database().ref('user/' + userId);
+
+  get_Data.child("frown").on('value', snap => frown = snap.val());
+  get_Data.child("smile").on('value', snap => smile = snap.val());
+  get_Data.child("surprise").on('value', snap => surprise = snap.val());
+  get_Data.child("winkL").on('value', snap => winkL = snap.val());
+  get_Data.child("winkR").on('value', snap => winkR = snap.val());
+
+
+  chrome.runtime.onMessage.addListener(function(request,sender,sendresponse){
+    if(request.message==='is_user_signed_in'){
+    
+        sendresponse({
+    message:frown,
+    payload:true,
+    data:'frown',
+    // smile:smile,
+    // surprise:surprise,
+    // winkL:winkL,
+    // winkR:winkR
+        });
+    }
+    return true;
+    })
 }
 
 

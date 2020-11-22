@@ -11,15 +11,15 @@ async function getDatatFromDataBase() {
     get_Data.child("winkR").on('value', snap => winkR = snap.val());
 
 }
-async function start() {
+function start() {
     let upperface
     let lowerface
     let eyes
     let surpriseCount = 0, smileCount = 0, winkLCount = 0, winkRCount = 0, frownCount = 0, timer = 0, neutral = 0
 
     firebase.auth().onAuthStateChanged(function (user) {
+
         if (user) {
-            console.log('here')
             getDatatFromDataBase().then(()=>{
 
             window.setInterval(() => {
@@ -62,7 +62,7 @@ async function start() {
 
                         // console.log(`eyes: ${eyes}, upper face: ${upperface}, lower face: ${lowerface}`)
 
-                        if (timer % 1000 === 0) {
+                        if (timer === 400) {
 
                             let max_fac = Math.max(surpriseCount, smileCount, winkLCount, winkRCount, frownCount, neutral / 3)
                             // console.log(tab, enter, back_page, refresh, page_down)
@@ -93,7 +93,9 @@ async function start() {
 
             }, 10)
         })
-        } else { console.log('erooooor')
+
+        } else { 
+            alert('you are not signed in')
         }
     })
 

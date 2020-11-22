@@ -26,9 +26,9 @@
                       <li class="nav-item"></li>
                       <li class="nav-item"><a class="nav-link text-left" href="Headset%20Status.html"><strong>Headset Status</strong></a></li>
                   </ul>
-                  <span class="navbar-text actions"> <a onclick="openLoginForm()" id="login_button" class="text-center login" href="#" style="margin: 10px;">Log In</a></span></div>
-                  <span class="navbar-text actions"> <a href="Sing%20Up.html" id="signup_button" class="text-center login" href="#" style="margin: 10px;" >Sing Up</a></span></div>
-                  <span class="navbar-text actions"> <a onclick="logout()" id="logout_button" class="text-center login" href="#" style="margin: 10px;">log out</a></span></div>
+                  <span class="navbar-text actions"> <a  id="login_button" class="text-center login" href="#" style="margin: 10px;visibility: hidden;">Log In</a></span></div>
+                  <span class="navbar-text actions"> <a href="Sing%20Up.html" id="signup_button" class="text-center login" href="#" style="margin: 10px;visibility: hidden" >Sing Up</a></span></div>
+                  <span class="navbar-text actions"> <a id="logout_button" class="text-center login" href="#" style="margin: 10px;visibility: hidden">log out</a></span></div>
                  
 
                   
@@ -99,7 +99,7 @@
       </div>
   </div>
   <div class="container" style="text-align: center;">
-      <div class="btn-group" role="group"><button onclick="get_radios_value()"  class="btn btn-primary" type="button">Save Changes&nbsp;</button></div>
+      <div class="btn-group" role="group"><button id="get_radios_value"  class="btn btn-primary" type="button">Save Changes&nbsp;</button></div>
   </div>
   <div>
       <div class="container">
@@ -112,7 +112,6 @@
   </div>
     <div class="popup-overlay"></div>
             <div class="popup">
-              <div class="popup-close" onclick="closeLoginForm()">&times;</div>
               <div class="form">
                 <div class="avatar">
                   <img src="assets/img/mind%20browsing.png" alt="">
@@ -129,7 +128,10 @@
                     <input type="password" id="pass_login">
                 </div>
                 <div class="element">
-                  <button onclick="sign_in()">Login</button>
+                  <button id="sign_in">Login</button>
+                  <form action="Sing Up.html">
+                    <button type="submit" value="Sign up ">Sign Up</button>
+                </form>
 
                 </div>
               </div>

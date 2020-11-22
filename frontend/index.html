@@ -11,16 +11,8 @@
   <link rel="stylesheet" href="assets/css/Footer-Clean.css">
   <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
-<script src="auth.js"></script>
-<script src="auth2.js"></script>
-<script src="home.js"></script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src=assets\js\pupop.js></script>
+
+
   <!-- <<<<<<< HEAD -->
 
   <!-- ======= -->
@@ -42,14 +34,14 @@
           <li class="nav-item"><a   class="nav-link text-left" href="Headset%20Status.html"><strong>Headset
                 Status</strong></a></li>
         </ul>
-        <span class="navbar-text actions"> <a onclick="openLoginForm()" id="login_button" class="text-center login"
-            href="#" style="margin: 10px;">Log In</a></span>
+        <span class="navbar-text actions"> <a  id="login_button" class="text-center login"
+            href="#" style="margin: 10px;visibility: hidden">Log In</a></span>
       </div>
       <span class="navbar-text actions"> <a href="Sing%20Up.html" id="signup_button" class="text-center login" href="#"
-          style="margin: 10px;">Sing Up</a></span>
+          style="margin: 10px;visibility: hidden">Sing Up</a></span>
     </div>
-    <span class="navbar-text actions"> <a onclick="logout()" id="logout_button" class="text-center login" href="#"
-        style="margin: 10px;">log out</a></span>
+    <span  class="navbar-text actions"> <a id="logout_button" class="text-center login" href="#"
+        style="margin: 10px;visibility: hidden;">log out</a></span>
 </div>
 </nav>
 <div class="container">
@@ -78,7 +70,7 @@
   </div>
   <div class="popup-overlay"></div>
   <div class="popup">
-    <div class="popup-close" onclick="closeLoginForm()">&times;</div>
+    <div id="popupclose" class="popup-close" >&times;</div>
     <div class="form">
       <div class="avatar">
         <img src="assets/img/mind%20browsing.png" alt="">
@@ -95,11 +87,27 @@
         <input type="password" id="pass_login">
       </div>
       <div class="element">
-        <button onclick="sign_in()">Login</button>
+        <button id="sign_in">Login</button>
+        <form action="Sing Up.html">
+          <button type="submit" value="Sign up ">Sign Up</button>
+      </form>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+<script src="auth.js"></script>
+<script src="auth2.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src=assets\js\pupop.js></script>
 
 </body>
 
