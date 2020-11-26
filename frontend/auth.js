@@ -19,47 +19,6 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  
-
-
-
-
-  // chrome.runtime.onMessage.addListener(function(request,sender,sendresponse){
-  //   if(request.message==='is_user_signed_in'){
-    
-  //       sendresponse({
-  //   message:'success',
-  //   payload:true,
-  //   // data:'frown',
-  //   // smile:smile,
-  //   // surprise:surprise,
-  //   // winkL:winkL,
-  //   // winkR:winkR
-  //       });
-  //   }
-  //   return true;
-  //   })
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function(event) {
-//   var b = document.getElementById('login');
-//   b.addEventListener('click', sign_up, false);
-// });
-
-
-
-
-// chrome.runtime.omMessage.addListener((msg,sender,resp)=>{
-
-//     alert(msg.data.domain)
-
-// }) 
-
-//document.querySelector('#login').addEventListener('click',sign_up)
-
     
 if(document.querySelector('#login') !== null){
   document.querySelector('#login').addEventListener('click',sign_in)
@@ -73,16 +32,11 @@ if(document.getElementById('sign_up') !== null){
 
     function sign_up() {
   
-     var email = document.querySelector('#email_login').value;
-     var password = document.querySelector('#pass_login').value;
-     alert(email)
-
-
-
-
+     var email = document.querySelector('#email_signup').value;
+     var password = document.querySelector('#pass_signup').value;
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(respnse){
         console.log(respnse);
-        //send(user_name);
+        send(user_name);
     })
 
 
@@ -129,12 +83,6 @@ if(document.getElementById('sign_up') !== null){
   // }
   
   
-
-  // firebase.auth().signOut().then(function () {
-  //   // Sign-out successful.
-  // }).catch(function (error) {
-  //   // An error happened.
-  // });
   if(document.getElementById('logout_button') !== null){
 
   document.getElementById('logout_button').addEventListener('click',logout);
@@ -173,7 +121,6 @@ if(document.getElementById('sign_up') !== null){
         winkL:'back_page'
   
     });
-    alert('done');
   }
 
 
