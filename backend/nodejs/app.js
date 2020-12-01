@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const socket = require('socket.io');
 
+
 let server = app.listen(4000,()=>console.log('emotiv is up'))
 
 let socketUrl = 'wss://localhost:6868'
@@ -17,10 +18,11 @@ let api = new emotiv.api(user,socketUrl)
 
 api.live('Nawaf')
 
-api.sub(['fac','dev'])
+api.sub(['fac'])
 
 app.get('/data',(req,res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
     return res.send(JSON.parse(api.data))
+    app.setMaxListeners(1000000);
 })
 
