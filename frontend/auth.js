@@ -190,6 +190,12 @@ for (var i = 0; i <  facial1.length; i++) {
       break;
     }
   }
+
+if(Surprise===Frown || Surprise===Smile || Surprise===Blink_Left || Surprise=== Blink_Right || Frown===Smile || Frown===Blink_Left || Frown=== Blink_Right ||Smile===Blink_Left || Smile=== Blink_Right ||Blink_Left=== Blink_Right){
+alert('There are two field the same')
+return;
+}
+
   update_facial(Surprise,Frown,Smile,Blink_Right,Blink_Left);
   z.push(Surprise);
   alert(z[0]);
@@ -221,6 +227,20 @@ function s_end(){
     }
     return true;
     })
+}
+if(document.getElementById('reset') !== null){
+  document.getElementById('reset').addEventListener('click',reset)
+}
+function reset(){
+
+document.getElementById('formCheck-1').checked=true;
+document.getElementById('formCheck-11').checked=true;
+document.getElementById('formCheck-12').checked=true;
+document.getElementById('formCheck-19').checked=true;
+document.getElementById('formCheck-21').checked=true;
+
+
+
 }
 
 
