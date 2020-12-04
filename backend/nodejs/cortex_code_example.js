@@ -8,11 +8,12 @@ const WebSocket = require('ws');
  *  - use async/await and Promise for request need to be run on sync
  */
 class Cortex {
-    constructor (user, socketUrl, data) {
+    constructor (user, socketUrl, data , dev) {
         // create socket
         process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
         this.socket = new WebSocket(socketUrl)
         this.data = null
+        this.dev = null
 
         // read user infor
         this.user = user
@@ -669,6 +670,9 @@ class Cortex {
             this.subRequest(['com'], this.authToken, this.sessionId)
 
             this.socket.on('message', (data)=>{
+                if (JSON.parse(data)['dev']){
+                    this.dev = data
+                }
                 console.log(data)
             })
         })

@@ -18,11 +18,16 @@ let api = new emotiv.api(user,socketUrl)
 
 api.live('Nawaf')
 
-api.sub(['fac'])
+api.sub(['fac','dev'])
+
 
 app.get('/data',(req,res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
     return res.send(JSON.parse(api.data))
-    app.setMaxListeners(1000000);
+})
+app.get('/dev',(req,res)=>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    console.log('dev is ', api.dev)
+    return res.send(JSON.parse(api.dev))
 })
 

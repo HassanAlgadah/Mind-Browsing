@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6cb50706-1546-4545-9ff8-5b2d6040dc6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/nodejs/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/nodejs/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/nodejs/cortex_code_example.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/nodejs/cortex_code_example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dev_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dev_info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -75,8 +79,8 @@
       <recent name="C:\Users\Hassan\Desktop\mind-browsing\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.app.js">
-    <configuration name="app.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/backend/app.js" working-dir="$PROJECT_DIR$/backend">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63860/mind-browsing/frontend/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/backend/nodejs">
@@ -112,10 +116,16 @@
     </configuration>
     <list>
       <item itemvalue="Node.js.app.js" />
-      <item itemvalue="Node.js.app.js (1)" />
       <item itemvalue="Node.js.cortex_code_example.js" />
       <item itemvalue="Node.js.home.js" />
+      <item itemvalue="JavaScript Debug.index.html" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -144,49 +154,51 @@
       <workItem from="1602063796610" duration="562000" />
       <workItem from="1603110449899" duration="279000" />
       <workItem from="1603460329430" duration="608000" />
+      <workItem from="1606437628863" duration="3681000" />
+      <workItem from="1606711529136" duration="7000" />
+      <workItem from="1607063217545" duration="3339000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1545" y="336" key="FileChooserDialogImpl" timestamp="1593913909990">
+    <state width="1620" height="244" key="GridCell.Tab.0.bottom" timestamp="1607066565066">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1545" y="336" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1593913909990" />
-    <state width="1620" height="244" key="GridCell.Tab.0.bottom" timestamp="1594816643492">
+    <state width="1620" height="244" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1607066565066" />
+    <state width="1620" height="244" key="GridCell.Tab.0.center" timestamp="1607066565066">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1620" height="244" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1594816643492" />
-    <state width="1620" height="244" key="GridCell.Tab.0.center" timestamp="1594816643492">
+    <state width="1620" height="244" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1607066565066" />
+    <state width="1620" height="244" key="GridCell.Tab.0.left" timestamp="1607066565065">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1620" height="244" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1594816643492" />
-    <state width="1620" height="244" key="GridCell.Tab.0.left" timestamp="1594816643491">
+    <state width="1620" height="244" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1607066565065" />
+    <state width="1620" height="244" key="GridCell.Tab.0.right" timestamp="1607066565066">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1620" height="244" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1594816643491" />
-    <state width="1620" height="244" key="GridCell.Tab.0.right" timestamp="1594816643492">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state width="1620" height="244" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1594816643492" />
+    <state width="1620" height="244" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1607066565066" />
     <state x="590" y="149" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602063827729">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="590" y="149" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1602063827729" />
+    <state x="680" y="249" width="672" height="678" key="search.everywhere.popup" timestamp="1607064696613">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="680" y="249" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1607064696613" />
   </component>
 </project>
